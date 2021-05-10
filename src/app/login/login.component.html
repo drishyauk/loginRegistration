@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>LOGIN</h3>
+  <h3><span style="color: red;font-size: 20px;"><br>{{loginErrMsg}}</span></h3><br>
+  <form [formGroup]="formGroup1" (ngSubmit)="onSubmit1(formGroup1.value)">
+    <div class="row form-group">
+      <div class="col-md-12">
+        <div class="form-group">
+          <span class="form-label">Username</span>
+          <input type="text" formControlName="username" id="username" required>
+        </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-12">
+        <div class="form-group">
+          <span class="form-label">Password</span>
+          <input type="password" formControlName="password" id="password" required>
+        </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <div class="form-group">
+          <span class="form-label"></span>
+          <input type="submit" class="form-control bookNowBtn" value="Login">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="form-group">
+            <span class="form-label"></span>
+            <input type="button" class="form-control bookNowBtn" value="New User" routerLink="/register" routerLinkActive="active">
+          </div>
+        </div>
+    </div>
+  </form>
+</div>

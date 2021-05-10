@@ -1,0 +1,23 @@
+<form [formGroup]="formGroup2" (ngSubmit)="onSubmit2(formGroup2.value)">
+  <div class="container">
+    <h3>Register</h3>
+    <label for="firstName"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstName" formControlName="firstName" required>
+
+    <label for="lastName"><b>Last Name</b></label><br>
+    <input type="text" placeholder="Enter Last name" id="lastname" name="lastname" formControlName="lastName" required><br>
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="email" placeholder="Enter email" id="email" name="email" formControlName="email" required><br>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password" required>
+
+    <label for="confirmPassword"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm password" name="confirmPassword" formControlName="confirmPassword" required>
+
+    <button type="submit">Register</button>
+    <br>
+    <span class="psw"><a href="#" routerLink="/login" routerLinkActive="active">Already a member</a></span>
+  </div>
+</form>
